@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace Mission08_Group_2_1.Models
 {
-    public class OurModel
+    public class Task
     {
     }
 }
