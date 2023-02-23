@@ -9,6 +9,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Mission08_Group_2_1.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace Mission08_Group_2_1
 {
@@ -25,6 +26,7 @@ namespace Mission08_Group_2_1
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
+            services.AddDbContext<Context>(options => options.UseSqlite(Configuration.GetConnectionString("TasksDb")));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
