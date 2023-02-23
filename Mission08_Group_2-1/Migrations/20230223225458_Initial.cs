@@ -1,5 +1,4 @@
-﻿using System;
-using Microsoft.EntityFrameworkCore.Migrations;
+﻿using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace Mission08_Group_2_1.Migrations
 {
@@ -26,7 +25,8 @@ namespace Mission08_Group_2_1.Migrations
                 {
                     Id = table.Column<int>(nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
-                    DueDate = table.Column<DateTime>(nullable: false),
+                    Name = table.Column<string>(nullable: false),
+                    DueDate = table.Column<string>(nullable: true),
                     Quadrant = table.Column<int>(nullable: false),
                     CategoryId = table.Column<int>(nullable: false),
                     Completed = table.Column<bool>(nullable: false)
@@ -66,6 +66,11 @@ namespace Mission08_Group_2_1.Migrations
                 table: "Categories",
                 columns: new[] { "Id", "Name" },
                 values: new object[] { 5, "Other" });
+
+            migrationBuilder.InsertData(
+                table: "Tasks",
+                columns: new[] { "Id", "CategoryId", "Completed", "DueDate", "Name", "Quadrant" },
+                values: new object[] { 1, 2, false, "2023-02-25", "404 Exam", 1 });
 
             migrationBuilder.CreateIndex(
                 name: "IX_Tasks_CategoryId",

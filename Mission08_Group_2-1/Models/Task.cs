@@ -10,7 +10,9 @@ namespace Mission08_Group_2_1.Models
     {
         [Key][Required] public int Id { get; set; }
 
-        public DateTime DueDate { get; set; }
+        [Required] public string Name { get; set; }
+
+        public string DueDate { get; set; }
 
         [Required(AllowEmptyStrings = false)] public int Quadrant { get; set; }
 

@@ -24,6 +24,17 @@ namespace Mission08_Group_2_1.Models
                 new Category {Id = 4, Name = "Church"},
                 new Category {Id = 5, Name = "Other"}
             );
+            modelBuilder.Entity<Task>().HasData(
+                new Task
+                {
+                    Id = 1,
+                    Name = "404 Exam",
+                    DueDate = "2023-02-25",
+                    Quadrant = 1,
+                    CategoryId = 2,
+                    Completed = false
+                }
+            );
         }
     }
 }
