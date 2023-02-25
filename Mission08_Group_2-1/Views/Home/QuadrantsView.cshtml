@@ -57,16 +57,19 @@
                 {
                     @if (data.Quadrant == 2)
                     {
-                        <tr>
-                            <td>@data.Name</td>
-                            <td>@data.DueDate</td>
-                            <td>@data.TaskCategory.Name</td>
-                            <td>@data.Completed</td>
-                            <td>
-                                <a asp-controller="Home" asp-action="Edit" asp-route-taskid="@data.Id" class="btn-light">Edit</a>
-                                <a asp-controller="Home" asp-action="Delete" asp-route-taskid="@data.Id" class="btn-light">Delete</a>
-                            </td>
-                        </tr>
+                        @if (data.Completed == false)
+                        {
+                            <tr>
+                                <td>@data.Name</td>
+                                <td>@data.DueDate</td>
+                                <td>@data.TaskCategory.Name</td>
+                                <td>@data.Completed</td>
+                                <td>
+                                    <a asp-controller="Home" asp-action="Edit" asp-route-taskid="@data.Id" class="btn-light">Edit</a>
+                                    <a asp-controller="Home" asp-action="Delete" asp-route-taskid="@data.Id" class="btn-light">Delete</a>
+                                </td>
+                            </tr>
+                        }
                     }
                 }
             </table>
@@ -88,16 +91,19 @@
                 {
                     @if (data.Quadrant == 3)
                     {
-                        <tr>
-                            <td>@data.Name</td>
-                            <td>@data.DueDate</td>
-                            <td>@data.TaskCategory.Name</td>
-                            <td>@data.Completed</td>
-                            <td>
-                                <a asp-controller="Home" asp-action="Edit" asp-route-taskid="@data.Id" class="btn-light">Edit</a>
-                                <a asp-controller="Home" asp-action="Delete" asp-route-taskid="@data.Id" class="btn-light">Delete</a>
-                            </td>
-                        </tr>
+                        @if (data.Completed == false)
+                        {
+                            <tr>
+                                <td>@data.Name</td>
+                                <td>@data.DueDate</td>
+                                <td>@data.TaskCategory.Name</td>
+                                <td id="Complete">@data.Completed</td>
+                                <td>
+                                    <a asp-controller="Home" asp-action="Edit" asp-route-taskid="@data.Id" class="btn-light">Edit</a>
+                                    <a asp-controller="Home" asp-action="Delete" asp-route-taskid="@data.Id" class="btn-light">Delete</a>
+                                </td>
+                            </tr>
+                        }
                     }
                 }
             </table>
@@ -116,16 +122,19 @@
                 {
                     @if (data.Quadrant == 4)
                     {
-                        <tr>
-                            <td>@data.Name</td>
-                            <td>@data.DueDate</td>
-                            <td>@data.TaskCategory.Name</td>
-                            <td>@data.Completed</td>
-                            <td>
-                                <a asp-controller="Home" asp-action="Edit" asp-route-taskid="@data.Id" class="btn-light">Edit</a>
-                                <a asp-controller="Home" asp-action="Delete" asp-route-taskid="@data.Id" class="btn-light">Delete</a>
-                            </td>
-                        </tr>
+                        @if (data.Completed == false)
+                        {
+                            <tr>
+                                <td>@data.Name</td>
+                                <td>@data.DueDate</td>
+                                <td>@data.TaskCategory.Name</td>
+                                <td>@data.Completed</td>
+                                <td>
+                                    <a asp-controller="Home" asp-action="Edit" asp-route-taskid="@data.Id" class="btn-light">Edit</a>
+                                    <a asp-controller="Home" asp-action="Delete" asp-route-taskid="@data.Id" class="btn-light">Delete</a>
+                                </td>
+                            </tr>
+                        }
                     }
                 }
             </table>

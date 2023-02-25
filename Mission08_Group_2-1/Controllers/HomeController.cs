@@ -42,6 +42,11 @@ namespace Mission08_Group_2_1.Controllers
             return RedirectToAction("QuadrantsView");
         }
 
+        public IActionResult Checked()
+        {
+            return View("QuadrantsView");
+        }
+
 
     }
 }
