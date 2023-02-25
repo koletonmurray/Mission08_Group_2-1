@@ -15,6 +15,8 @@ namespace Mission08_Group_2_1.Models
         public DbSet<Task> Tasks { get; set; }
         public DbSet<Category> Categories { get; set; }
 
+        // Seed data in the database upon creation for categories and tasks
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Category>().HasData(

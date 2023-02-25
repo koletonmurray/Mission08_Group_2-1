@@ -25,6 +25,7 @@ namespace Mission08_Group_2_1.Controllers
             return View();
         }
 
+        // Quadrants View to display our chart
         public IActionResult QuadrantsView()
         {
             ViewBag.Category = _TaskContext.Categories.ToList();
@@ -33,7 +34,7 @@ namespace Mission08_Group_2_1.Controllers
             return View(data);
         }
 
-
+        // When a task is deleted
         public IActionResult Delete(int taskid)
         {
             var SingleTask = _TaskContext.Tasks.Single(x => x.Id == taskid);
@@ -42,6 +43,7 @@ namespace Mission08_Group_2_1.Controllers
             return RedirectToAction("QuadrantsView");
         }
 
+        // When a task is marked as completed
         public IActionResult Checked(int taskid)
         {
             var SingleTask = _TaskContext.Tasks.Single(x => x.Id == taskid);
@@ -51,6 +53,7 @@ namespace Mission08_Group_2_1.Controllers
             return RedirectToAction("QuadrantsView");
         }
 
+        // Get and Post for when a task is added 
         [HttpGet]
         public IActionResult AddTask()
         {
@@ -78,6 +81,7 @@ namespace Mission08_Group_2_1.Controllers
 
         }
 
+        // Get and Post for when a task is edited pass the task and feed it to the edit view
         [HttpGet]
         public IActionResult Edit(int taskid)
         {
@@ -105,7 +109,5 @@ namespace Mission08_Group_2_1.Controllers
                 return View();
             }
         }
-
-
     }
 }

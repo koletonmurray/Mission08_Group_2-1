@@ -4,6 +4,9 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.ComponentModel.DataAnnotations;
 
+
+// Creates the model for our category table 
+
 namespace Mission08_Group_2_1.Models
 {
     public class Category

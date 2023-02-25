@@ -4,6 +4,9 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.ComponentModel.DataAnnotations;
 
+// Creates the model structure for our task table and all its attributes
+// At the bottom we link our category to our task
+
 namespace Mission08_Group_2_1.Models
 {
     public class Task

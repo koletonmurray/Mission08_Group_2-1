@@ -4,6 +4,8 @@
 
 @model Mission08_Group_2_1.Models.Task
 
+<!-- Form to create a new task with all the elements found in the models -->
+
 <form method="post">
     <label asp-for="Name">Name:</label>
     <input asp-for="Name" /><br />
@@ -13,9 +15,9 @@
     <select asp-for="Quadrant">
         <option>--Select Quadrant--</option>
         <option value="1">1 - Important and Urgent</option>
-        <option value="2">2 - Important but Not Urgent</option>
-        <option value="3">3 - Not Important but Urgent</option>
-        <option value="4">4 - Not Important nor Urgent</option>
+        <option value="2">2 - Important, but Not Urgent</option>
+        <option value="3">3 - Not Important, but Urgent</option>
+        <option value="4">4 - Not Important and Not Urgent</option>
     </select><br />
     <label asp-for="CategoryId">Category:</label>
     <select asp-for="CategoryId">
