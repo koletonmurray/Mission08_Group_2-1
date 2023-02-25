@@ -33,6 +33,15 @@ namespace Mission08_Group_2_1.Models
                     Quadrant = 1,
                     CategoryId = 2,
                     Completed = false
+                }, 
+                new Task
+                {
+                    Id = 5,
+                    Name = "Test",
+                    DueDate = "2023-02-25",
+                    Quadrant = 3,
+                    CategoryId = 3,
+                    Completed = true
                 },
                 new Task
                 {
