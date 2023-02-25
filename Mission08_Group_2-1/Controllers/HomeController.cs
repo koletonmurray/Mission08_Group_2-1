@@ -33,9 +33,15 @@ namespace Mission08_Group_2_1.Controllers
             return View(data);
         }
 
-        public IActionResult Delete()
+
+        public IActionResult Delete(int taskid)
         {
-            return View();
+            var SingleTask = _TaskContext.Tasks.Single(x => x.Id == taskid);
+            _TaskContext.Remove(SingleTask);
+            _TaskContext.SaveChanges();
+            return RedirectToAction("QuadrantsView");
         }
+
+
     }
 }
