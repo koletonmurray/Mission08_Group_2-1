@@ -42,9 +42,13 @@ namespace Mission08_Group_2_1.Controllers
             return RedirectToAction("QuadrantsView");
         }
 
-        public IActionResult Checked()
+        public IActionResult Checked(int taskid)
         {
-            return View("QuadrantsView");
+            var SingleTask = _TaskContext.Tasks.Single(x => x.Id == taskid);
+            SingleTask.Completed = true;
+            _TaskContext.Update(SingleTask);
+            _TaskContext.SaveChanges();
+            return RedirectToAction("QuadrantsView");
         }
 
 

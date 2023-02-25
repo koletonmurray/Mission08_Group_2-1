@@ -69,6 +69,15 @@ namespace Mission08_Group_2_1.Models
                     Quadrant = 4,
                     CategoryId = 5,
                     Completed = false
+                },
+                new Task
+                {
+                    Id = 5,
+                    Name = "Church",
+                    DueDate = "2023-02-19",
+                    Quadrant = 2,
+                    CategoryId = 4,
+                    Completed = true
                 }
             );
         }
