@@ -8,7 +8,7 @@ using Mission08_Group_2_1.Models;
 namespace Mission08_Group_2_1.Migrations
 {
     [DbContext(typeof(Context))]
-    [Migration("20230225002344_Initial")]
+    [Migration("20230225003854_Initial")]
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -96,6 +96,15 @@ namespace Mission08_Group_2_1.Migrations
                             DueDate = "2023-02-25",
                             Name = "404 Exam",
                             Quadrant = 1
+                        },
+                        new
+                        {
+                            Id = 5,
+                            CategoryId = 3,
+                            Completed = true,
+                            DueDate = "2023-02-25",
+                            Name = "Test",
+                            Quadrant = 3
                         },
                         new
                         {
