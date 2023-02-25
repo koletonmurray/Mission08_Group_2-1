@@ -1,0 +1,119 @@
+﻿@{
+}
+
+@model List<Mission08_Group_2_1.Models.Task>
+
+<h1>This is where you can view your tasks</h1>
+
+
+    
+    
+
+
+<div class="container text-center">
+    <div class="row">
+        <div class="col">
+            <h2>Quadrant 1</h2>
+            <table class="table-bordered m-2">
+                <tr>
+                    <th>Task</th>
+                    <th>Due Date</th>
+                    <th>Category</th>
+                    <th>Completed</th>
+                    <th>Edit</th>
+                </tr>
+                @foreach (var data in Model)
+                {
+                    @if (data.Quadrant == 1)
+                    { 
+                    <tr>
+                        <td>@data.Name</td>
+                        <td>@data.DueDate</td>
+                        <td>@data.TaskCategory.Name</td>
+                        <td>@data.Completed</td>
+                        <td>SampleData5</td>
+                    </tr>
+                    }
+                }
+                </table>
+        </div>
+        <div class="col">
+            <h2>Quadrant 2</h2>
+            <table class="table-bordered m-2">
+                <tr>
+                    <th>Task</th>
+                    <th>Due Date</th>
+                    <th>Category</th>
+                    <th>Completed</th>
+                    <th>Edit</th>
+                </tr>
+                @foreach (var data in Model)
+                {
+                    @if (data.Quadrant == 2)
+                    {
+                        <tr>
+                            <td>@data.Name</td>
+                            <td>@data.DueDate</td>
+                            <td>@data.TaskCategory.Name</td>
+                            <td>@data.Completed</td>
+                            <td>SampleData5</td>
+                        </tr>
+                    }
+                }
+            </table>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col">
+            <h2>Quadrant 3</h2>
+            <table class="table-bordered m-2">
+                <tr>
+                    <th>Task</th>
+                    <th>Due Date</th>
+                    <th>Category</th>
+                    <th>Completed</th>
+                    <th>Edit</th>
+                </tr>
+                @foreach (var data in Model)
+                {
+                    @if (data.Quadrant == 3)
+                    {
+                        <tr>
+                            <td>@data.Name</td>
+                            <td>@data.DueDate</td>
+                            <td>@data.TaskCategory.Name</td>
+                            <td>@data.Completed</td>
+                            <td>SampleData5</td>
+                        </tr>
+                    }
+                }
+            </table>
+        </div>
+        <div class="col">
+            <h2>Quadrant 4</h2>
+            <table class="table-bordered m-2">
+                <tr>
+                    <th>Task</th>
+                    <th>Due Date</th>
+                    <th>Category</th>
+                    <th>Completed</th>
+                    <th>Edit</th>
+                </tr>
+                @foreach (var data in Model)
+                {
+                    @if (data.Quadrant == 4)
+                    {
+                        <tr>
+                            <td>@data.Name</td>
+                            <td>@data.DueDate</td>
+                            <td>@data.TaskCategory.Name</td>
+                            <td>@data.Completed</td>
+                            <td>SampleData5</td>
+                        </tr>
+                    }
+                }
+            </table>
+        </div>
+    </div>
+</div>
