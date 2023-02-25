@@ -51,6 +51,31 @@ namespace Mission08_Group_2_1.Controllers
             return RedirectToAction("QuadrantsView");
         }
 
+        [HttpGet]
+        public IActionResult AddTask()
+        {
+            ViewBag.Category = _TaskContext.Categories.ToList();
 
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult AddTask(Models.Task t)
+        {
+            if (ModelState.IsValid)
+            {
+                _TaskContext.Add(t);
+                _TaskContext.SaveChanges();
+
+                return RedirectToAction("Index");
+            }
+            else
+            {
+                ViewBag.Category = _TaskContext.Categories.ToList();
+
+                return View();
+            }
+
+        }
     }
 }
