@@ -97,6 +97,15 @@ namespace Mission08_Group_2_1.Migrations
                         },
                         new
                         {
+                            Id = 5,
+                            CategoryId = 3,
+                            Completed = true,
+                            DueDate = "2023-02-25",
+                            Name = "Test",
+                            Quadrant = 3
+                        },
+                        new
+                        {
                             Id = 2,
                             CategoryId = 5,
                             Completed = false,

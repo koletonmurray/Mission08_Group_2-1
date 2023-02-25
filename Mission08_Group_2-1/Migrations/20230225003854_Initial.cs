@@ -75,6 +75,11 @@ namespace Mission08_Group_2_1.Migrations
             migrationBuilder.InsertData(
                 table: "Tasks",
                 columns: new[] { "Id", "CategoryId", "Completed", "DueDate", "Name", "Quadrant" },
+                values: new object[] { 5, 3, true, "2023-02-25", "Test", 3 });
+
+            migrationBuilder.InsertData(
+                table: "Tasks",
+                columns: new[] { "Id", "CategoryId", "Completed", "DueDate", "Name", "Quadrant" },
                 values: new object[] { 2, 5, false, "2023-02-28", "Call Doctor", 3 });
 
             migrationBuilder.InsertData(
