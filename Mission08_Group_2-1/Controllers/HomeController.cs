@@ -11,12 +11,29 @@ namespace Mission08_Group_2_1.Controllers
 {
     public class HomeController : Controller
     {
-        public HomeController()
-        {
+        //Constuctor
 
+        private Context _TaskContext { get; set; }
+
+        public HomeController(Context namedoesntmatter)
+        {
+            _TaskContext = namedoesntmatter;
         }
 
         public IActionResult Index()
+        {
+            return View();
+        }
+
+        public IActionResult QuadrantsView()
+        {
+            ViewBag.Category = _TaskContext.Categories.ToList();
+            var data = _TaskContext.Tasks.ToList();
+
+            return View(data);
+        }
+
+        public IActionResult Delete()
         {
             return View();
         }
