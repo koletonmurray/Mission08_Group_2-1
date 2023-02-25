@@ -33,6 +33,33 @@ namespace Mission08_Group_2_1.Models
                     Quadrant = 1,
                     CategoryId = 2,
                     Completed = false
+                },
+                new Task
+                {
+                    Id = 2,
+                    Name = "Call Doctor",
+                    DueDate = "2023-02-28",
+                    Quadrant = 3,
+                    CategoryId = 5,
+                    Completed = false
+                },
+                new Task
+                {
+                    Id = 3,
+                    Name = "Date Night",
+                    DueDate = "2023-03-04",
+                    Quadrant = 2,
+                    CategoryId = 5,
+                    Completed = false
+                },
+                new Task
+                {
+                    Id = 4,
+                    Name = "COD with the Boyz",
+                    DueDate = "2023-03-04",
+                    Quadrant = 4,
+                    CategoryId = 5,
+                    Completed = false
                 }
             );
         }
