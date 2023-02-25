@@ -94,6 +94,33 @@ namespace Mission08_Group_2_1.Migrations
                             DueDate = "2023-02-25",
                             Name = "404 Exam",
                             Quadrant = 1
+                        },
+                        new
+                        {
+                            Id = 2,
+                            CategoryId = 5,
+                            Completed = false,
+                            DueDate = "2023-02-28",
+                            Name = "Call Doctor",
+                            Quadrant = 3
+                        },
+                        new
+                        {
+                            Id = 3,
+                            CategoryId = 5,
+                            Completed = false,
+                            DueDate = "2023-03-04",
+                            Name = "Date Night",
+                            Quadrant = 2
+                        },
+                        new
+                        {
+                            Id = 4,
+                            CategoryId = 5,
+                            Completed = false,
+                            DueDate = "2023-03-04",
+                            Name = "COD with the Boyz",
+                            Quadrant = 4
                         });
                 });
 
