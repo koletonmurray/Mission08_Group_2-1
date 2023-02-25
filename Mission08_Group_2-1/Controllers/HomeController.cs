@@ -33,19 +33,20 @@ namespace Mission08_Group_2_1.Controllers
             return View(data);
         }
 
-        public IActionResult MarkComplete(int TaskId)
+
+        public IActionResult Delete(int taskid)
         {
-            var task = _TaskContext.Tasks.Single(x => x.Id == TaskId);
-            task.Completed = true;
-            Console.WriteLine(task);
-            _TaskContext.Update(task);
+            var SingleTask = _TaskContext.Tasks.Single(x => x.Id == taskid);
+            _TaskContext.Remove(SingleTask);
             _TaskContext.SaveChanges();
             return RedirectToAction("QuadrantsView");
         }
 
-        public IActionResult Delete()
+        public IActionResult Checked()
         {
-            return View();
+            return View("QuadrantsView");
         }
+
+
     }
 }
