@@ -77,5 +77,35 @@ namespace Mission08_Group_2_1.Controllers
             }
 
         }
+
+        [HttpGet]
+        public IActionResult Edit(int taskid)
+        {
+            ViewBag.Category = _TaskContext.Categories.ToList();
+            var task = _TaskContext.Tasks.Single(x => x.Id == taskid);
+
+            return View("Edit", task);
+        }
+
+        [HttpPost]
+        public IActionResult Edit(Models.Task t)
+        {
+            if (ModelState.IsValid)
+            {
+
+                _TaskContext.Update(t);
+                _TaskContext.SaveChanges();
+
+                return RedirectToAction("QuadrantsView");
+            }
+            else
+            {
+                ViewBag.Category = _TaskContext.Categories.ToList();
+
+                return View();
+            }
+        }
+
+
     }
 }
