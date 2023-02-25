@@ -32,5 +32,10 @@ namespace Mission08_Group_2_1.Controllers
 
             return View(data);
         }
+
+        public IActionResult Delete()
+        {
+            return View();
+        }
     }
 }
