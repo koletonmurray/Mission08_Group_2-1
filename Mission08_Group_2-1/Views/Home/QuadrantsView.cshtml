@@ -32,7 +32,7 @@
                                 <td>@data.Name</td>
                                 <td>@data.DueDate</td>
                                 <td>@data.TaskCategory.Name</td>
-                                <td><a asp-controller="Home" asp-action="Checked" asp-route-taskid="@data.Id" class="btn-light">Mark Complete</a></td>
+                                <td><a asp-controller="Home" asp-action="Checked" asp-route-taskid="@data.Id" class="btn-light">Mark as Complete</a></td>
                                 <td>
                                     <a asp-controller="Home" asp-action="Edit" asp-route-taskid="@data.Id" class="btn-light">Edit</a>
                                     <a asp-controller="Home" asp-action="Delete" asp-route-taskid="@data.Id" class="btn-light">Delete</a>
